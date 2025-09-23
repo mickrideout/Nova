@@ -1,0 +1,119 @@
+1. Define new scientific problems
+Theoretical basis:
+- Kuhn's paradigm theory
+- Laudan's problem-solving model
+- Nichols's problem-generation theory
+
+Method:
+- Identify anomalies in existing theories
+- Explore theoretical boundaries and scope of application
+- Integrate interdisciplinary knowledge and discover new problems
+- Re-examine neglected historical problems
+
+2. Propose new hypotheses
+Theoretical basis:
+- Pierce's hypothetical deduction method
+- Weber's theory of accidental discovery
+- Simon's scientific discovery as problem solving
+
+Method:
+- Analogical reasoning
+- Thought experiment
+- Intuition and creative leaps
+- Reductio ad absurdum thinking
+
+3. Exploring the limitations and shortcomings of current methods
+Theoretical basis:
+- Popper's falsificationism
+- Lakatos's research program methodology
+- Feyerabend's methodological anarchism
+
+Method:
+- Critically analyze existing methods
+- Find deviations between theoretical predictions and experimental results
+- Explore the performance of methods under extreme conditions
+- Interdisciplinary comparative methodology
+
+4. Design and improve existing methods
+Theoretical basis:
+- Laudan's methodological improvement model
+- Ziemann's creative extension theory
+- Hacking's experimental system theory
+
+Methods:
+- Integrate new technologies and tools
+- Improve experimental design and control
+- Improve measurement accuracy and resolution
+- Develop new data analysis methods
+
+5. Abstract and summarize the general laws behind multiple related studies
+Theoretical basis:
+- Whewell's conceptual synthesis theory
+- Carnap's inductive logic
+- Glaser and Strauss's grounded theory
+
+Methods:
+- Comparative analysis of multiple case studies
+- Identify common patterns and structures
+- Construct conceptual frameworks and theoretical models
+- Formal and mathematical descriptions
+
+6. Construct and modify theoretical models
+Theoretical basis:
+- Quine's holism
+- Lakoff's conceptual metaphor theory
+- Kitcher's unified theory of science
+
+Methods:
+- Form a balance between reductionism and emergence
+- Develop an interdisciplinary theoretical framework
+- Mathematical modeling and computer simulation
+- Theoretical simplification and unification
+
+7. Designing critical experiments
+Theoretical foundation:
+- Duhem-Quine thesis
+- Bayesian experimental design theory
+- Mayo's experimental reasoning theory
+
+Methods:
+- Designing experiments that can distinguish competing theories
+- Exploring extreme conditions and boundary cases
+- Developing new observation and measurement techniques
+- Designing natural experiments and quasi-experiments
+
+8. Explaining and integrating anomalous findings
+Theoretical foundation:
+- Hansen's theory of anomalous findings
+- Sutton's model of scientific serendipity
+- Kuhn's theory of crises and revolutions
+
+Methods:
+- Revisiting basic assumptions
+- Developing auxiliary hypotheses
+- Exploring new explanatory frameworks
+- Integrating multidisciplinary perspectives
+
+9. Evaluating and selecting competing theories
+Theoretical foundation:
+- Reichenbach's confirmation theory
+- Sober's theory selection criteria
+- Laudan's problem-solving progress assessment
+
+Methods:
+- Comparing theories for explanatory power and predictive power
+- Evaluating the simplicity and elegance of theories
+- Considering the heuristics and research agenda of theories
+- Weighing the empirical adequacy and conceptual coherence of theories
+
+10. Scientific paradigm shift
+Theoretical basis:
+- Kuhn's theory of scientific revolutions
+- Toulmin's model of conceptual evolution
+- Hall's dynamic system theory
+
+Methods:
+- Identify accumulated anomalies and crises
+- Develop new conceptual frameworks
+- Reinterpret and organize known facts
+- Establish new research traditions and practices

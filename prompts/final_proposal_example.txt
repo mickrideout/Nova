@@ -1,0 +1,198 @@
+## Example1(Please refer to but don't copy the results.)
+### Input
+#### Target paper
+target paper title:ResearchAgent: Iterative Research Idea Generation over Scientific Literature with Large Language Models
+target paper abstract:Scientific Research, vital for improving human life, is hindered by its inherent complexity, slow pace, and the need for specialized experts. To enhance its productivity, we propose a ResearchAgent, a large language model-powered research idea writing agent, which automatically generates problems, methods, and experiment designs while iteratively refining them based on scientific literature. Specifically, starting with a core paper as the primary focus to generate ideas, our ResearchAgent is augmented not only with relevant publications through connecting information over an academic graph but also entities retrieved from an entity-centric knowledge store based on their underlying concepts, mined and shared across numerous papers. In addition, mirroring the human approach to iteratively improving ideas with peer discussions, we leverage multiple ReviewingAgents that provide reviews and feedback iteratively. Further, they are instantiated with human preference-aligned large language models whose criteria for evaluation are derived from actual human judgments. We experimentally validate our ResearchAgent on scientific publications across multiple disciplines, showcasing its effectiveness in generating novel, clear, and valid research ideas based on human and model-based evaluation results.
+#### Initial proposal
+Cross-Modal Associative Research Ideation:
+Type: algorithm design
+Problem: Current large language models (LLMs) like the ResearchAgent excel at generating research ideas from textual data but struggle to incorporate multi-modal inputs effectively, limiting the diversity and creativity of generated ideas.
+Existing Methods: The ResearchAgent uses LLMs to generate research ideas iteratively, leveraging academic graphs and entity-centric knowledge stores to refine ideas. However, it primarily focuses on text-based inputs and lacks the integration of multi-modal data to enhance creativity.
+Motivation: Inspired by the cognitive basis of creativity, where multi-modal cues can trigger novel connections, we propose integrating associative thinking strategies with multi-modal inputs to enhance the creativity and diversity of research ideas. This approach aims to leverage the strengths of multi-modal AI models to generate more innovative and diverse research ideas.
+Proposed Method: We propose a novel framework called Cross-Modal Associative Research Ideation (CMARI). The CMARI framework consists of three main components: (1) Multi-Modal Data Integration: Collect and preprocess data across visual, auditory, and textual modalities from scientific literature, including figures, audio recordings, and textual descriptions. (2) Associative Thinking Algorithm: Develop an algorithm that links disparate concepts across modalities, inspired by cognitive science principles. This algorithm will use cross-modal embeddings to identify and connect related concepts, fostering creative idea generation. (3) Iterative Refinement: Implement an iterative process where the generated ideas are refined through feedback loops with ReviewingAgents, incorporating multi-modal insights to enhance creativity and diversity.
+Experiment Plan: To evaluate CMARI, we will conduct experiments on a diverse set of scientific publications across multiple disciplines. Baselines will include the original ResearchAgent and other text-based ideation models. Evaluation metrics will focus on creativity, diversity, and novelty of generated ideas, using both human and model-based assessments. We will also explore the impact of different modalities on idea generation and assess the computational efficiency of the proposed framework.
+#### MethodSubmodulesJsonList
+{
+    "Module 1": {
+        "thinking": "Integrating multi-modal data is crucial for enhancing creativity in research ideation. This module focuses on collecting and preprocessing diverse data types to ensure comprehensive input for the ideation process.",
+        "title": "Multi-Modal Data Integration",
+        "purpose": "To collect and preprocess data across visual, auditory, and textual modalities from scientific literature, providing a rich and diverse input for the ideation process.",
+        "implementation": {
+            "Data Collection System": "A system to gather data from various sources, including scientific papers, databases, and online repositories, capturing images, audio, and text.",
+            "Preprocessing Pipeline": "A pipeline to clean, normalize, and format data, ensuring compatibility across modalities and preparing it for embedding generation.",
+            "Data Storage Architecture": "A robust storage solution to manage and retrieve multi-modal data efficiently, supporting real-time access during ideation."
+        },
+        "search_keywords": [
+            "multi-modal data integration",
+            "data preprocessing for AI",
+            "cross-modal data collection",
+            "multi-modal AI models"
+        ]
+    },
+    "Module 2": {
+        "thinking": "Associative thinking is key to creativity. This module focuses on developing an algorithm that links disparate concepts across modalities, inspired by cognitive science principles.",
+        "title": "Associative Thinking Algorithm",
+        "purpose": "To develop an algorithm that links disparate concepts across modalities, fostering creative idea generation through cross-modal embeddings.",
+        "implementation": {
+            "Cross-Modal Embeddings": "A technique to generate embeddings that represent concepts across different modalities, enabling the identification of related ideas.",
+            "Concept Linking Mechanism": "An algorithm to connect related concepts using embeddings, inspired by cognitive science principles of associative thinking.",
+            "Creativity Enhancement Engine": "A system to leverage linked concepts for generating innovative and diverse research ideas."
+        },
+        "search_keywords": [
+            "associative thinking in AI",
+            "cross-modal embeddings",
+            "concept linking algorithms",
+            "cognitive science and AI"
+        ]
+    },
+    "Module 3": {
+        "thinking": "Iterative refinement is essential for improving the quality of generated ideas. This module focuses on refining ideas through feedback loops with ReviewingAgents, incorporating multi-modal insights.",
+        "title": "Iterative Refinement Process",
+        "purpose": "To implement an iterative process where generated ideas are refined through feedback loops with ReviewingAgents, enhancing creativity and diversity.",
+        "implementation": {
+            "Feedback Loop System": "A mechanism to collect feedback from ReviewingAgents, incorporating insights from multi-modal data.",
+            "Idea Refinement Algorithm": "An algorithm to refine ideas based on feedback, ensuring continuous improvement in creativity and diversity.",
+            "ReviewingAgent Interface": "An interface for ReviewingAgents to provide feedback, facilitating the iterative refinement process."
+        },
+        "search_keywords": [
+            "iterative refinement in AI",
+            "feedback loops in ideation",
+            "multi-modal insights for creativity",
+            "reviewing agents in AI"
+        ]
+    }
+}
+
+### Output
+#### Thinking:
+To ensure this project has the potential to win best paper awards at top conferences like ACL, NeurIPS, ICLR, or CVPR, several aspects of the initial idea and the `method_decom_info` have been refined and emphasized:
+
+1.  **Strengthened Novelty and Significance:** While the base idea of multi-modal input is good, the proposal now emphasizes the *Cross-Modal Associative Thinking Algorithm* as the core innovation. This isn't just about feeding multi-modal data but about an explicit algorithm, inspired by cognitive science, to find *non-obvious, creative links* between modalities. This goes beyond simple multi-modal fusion and tackles a harder problem in AI creativity. The significance is amplified by framing it as a way to unlock a new level of AI-assisted scientific discovery.
+
+2.  **Enhanced Methodological Detail and Rigor:** The three modules from `method_decom_info` are adopted and significantly detailed.
+    *   **Multi-Modal Data Integration:** Specifics on data sources, extraction techniques (mentioning tools like `pdffigures2`, `nougat`, `Whisper`), and preprocessing steps are included. The "Data Storage Architecture" is considered.
+    *   **Associative Thinking Algorithm:** This is the heart. The proposal details how cross-modal embeddings (e.g., CLIP, sentence-transformers) will be used, how concepts will be identified, and crucially, how "associative links" or "chains" will be formed (e.g., Text Concept -> Visual Feature -> Related Text Concept in another paper). This algorithmic component is key for distinguishing the work.
+    *   **Iterative Refinement:** The proposal explicitly integrates this with multi-modal feedback, making the ReviewingAgents more powerful by allowing them to critique based on multi-modal evidence and how well the idea leverages cross-modal insights.
+
+3.  **Robust and Comprehensive Experiment Plan:**
+    *   **Clear Baselines:** Includes the target paper (ResearchAgent) and simpler LLM prompting.
+    *   **Detailed Metrics:** Combines human evaluation (crucial for creativity, novelty) with model-based proxies and quantitative diversity measures. Specific criteria for human evaluation are outlined, including a CMARI-specific metric on cross-modal integration.
+    *   **Ablation Studies:** Planned to demonstrate the contribution of each modality and the associative linking mechanism.
+    *   **Concrete Prompting Examples:** Provided for both idea generation and reviewer agent interaction, showing how multi-modal insights are explicitly incorporated into the prompts. This makes the "how-to" much clearer.
+    *   **Feasibility with Black-Box LLMs:** The plan ensures that operations like embedding generation, image captioning, and LLM interactions can be done via APIs (e.g., OpenAI) or with open-source models, respecting typical research constraints.
+
+4.  **Connection to Cognitive Science:** The motivation from cognitive theories of associative thinking is made more explicit and woven into the algorithm design, adding depth and interdisciplinary appeal.
+
+5.  **Targeting Award-Winning Qualities:**
+    *   **Impact:** Addresses a fundamental challenge in research – ideation – with a potentially transformative approach.
+    *   **Innovation:** The core associative algorithm and its application to research ideation are innovative.
+    *   **Soundness:** The methodology is broken down into feasible, well-defined steps.
+    *   **Evaluation:** The multi-faceted evaluation plan aims for convincing evidence.
+
+The `MethodSubmodulesJsonList` was a good starting point. Its strengths were the clear modularization and the thinking behind each module. The expansion focused on:
+*   Making the "Associative Thinking Algorithm" more concrete and algorithmic, rather than just a general idea.
+*   Detailing *how* multi-modal data translates into better ideas through specific prompting strategies and feedback mechanisms.
+*   Designing experiments that can rigorously test the central hypotheses and isolate the contributions of the novel components.
+
+By focusing on these aspects, the proposal moves from a good idea to a plan for a potentially high-impact research paper.
+#### FinalProposal:
+```json
+{
+    "Title": "CMARI: Fostering Creative Research Ideation via Cross-Modal Associative Learning and Multi-Modal Inputs",
+    "Problem Statement": "Current Large Language Models (LLMs), including advanced systems like ResearchAgent, primarily leverage textual data for generating research ideas. This uni-modal focus inherently limits the diversity, novelty, and creative potential of the generated ideas, as human scientific creativity often arises from synthesizing information across multiple modalities (e.g., textual descriptions, visual diagrams, auditory discussions). The problem is significant because the pace of scientific discovery is often bottlenecked by the ability to formulate truly innovative research questions and hypotheses. Overcoming the uni-modal limitation in AI-driven ideation can unlock new perspectives and accelerate scientific breakthroughs.",
+    "Motivation": "The target paper, 'ResearchAgent: Iterative Research Idea Generation over Scientific Literature with Large Language Models,' demonstrates the power of LLMs in iteratively generating and refining research ideas using textual academic graphs and entity-centric knowledge stores. However, its reliance on text-only inputs means it cannot fully tap into the rich semantic information embedded in figures, tables, and potentially audio-visual materials associated with scientific literature. Classical ideation methods are often manual and time-consuming. While recent LLM-based methods like ResearchAgent automate parts of this, they inherit the uni-modal constraint.\nOur motivation for CMARI (Cross-Modal Associative Research Ideation) stems from two key insights: \n1. Cognitive Basis of Creativity: Human creativity often involves 'associative thinking' – connecting seemingly disparate concepts. These connections can be triggered by multi-modal cues (e.g., an image sparking an analogy, a spoken phrase linking to a textual concept). \n2. Advances in Multi-Modal AI: Models like CLIP, ImageBind, and VLMs (Vision-Language Models) have shown remarkable capabilities in understanding and relating information across different modalities. \nCMARI is proposed to work better than existing text-only baselines (like the original ResearchAgent) because it explicitly integrates multi-modal data (visual, auditory, textual) and employs a novel associative thinking algorithm to discover non-obvious links between concepts across these modalities. These cross-modal associations can serve as powerful 'creative sparks' or 'conceptual bridges' that text-only systems would miss, leading to a richer and more diverse set of initial hypotheses. The subsequent iterative refinement, now informed by multi-modal feedback, can further enhance the quality and grounding of these novel ideas.",
+    "Proposed Method": {
+        "Overview": "CMARI extends the iterative research ideation paradigm of ResearchAgent by incorporating a multi-modal understanding and associative reasoning layer. It consists of three core modules designed to synergistically generate and refine creative research ideas.",
+        "Module 1: Multi-Modal Data Integration and Preprocessing": {
+            "Purpose": "To collect, extract, and preprocess data from diverse scientific sources across visual, auditory, and textual modalities, creating a rich, structured knowledge base for ideation.",
+            "Implementation": {
+                "Data Collection": "Systematically gather scientific publications (PDFs from arXiv, PubMed, etc.). Optionally, collect links to relevant publicly available conference talks/lectures (audio/video).",
+                "Content Extraction": {
+                    "Text": "Parse full text, abstracts, and captions from PDFs.",
+                    "Visual": "Extract figures, tables, and equations as images from PDFs using tools like pdffigures2, Nougat, or similar layout-aware models. Store associated captions.",
+                    "Auditory (Optional)": "If video/audio is collected, transcribe spoken content using ASR models (e.g., OpenAI Whisper API or open-source alternatives)."
+                },
+                "Preprocessing": {
+                    "Text": "Clean, normalize (e.g., LaTeX to Unicode), and segment text. Identify key entities and concepts.",
+                    "Visual": "Normalize image sizes, perform OCR on text within images if necessary. Generate descriptive tags or brief summaries for images using VLM models (e.g., BLIP-2, or GPT-4V if API allows for this task) if captions are insufficient.",
+                    "Auditory": "Clean transcripts, segment into meaningful chunks."
+                },
+                "Data Storage": "Store processed multi-modal data in a structured format (e.g., a document database or graph database) linking all elements (text snippets, image files, image descriptions, audio transcripts) to their source documents and to each other where explicit links exist (e.g., figure mentions in text)."
+            }
+        },
+        "Module 2: Cross-Modal Associative Thinking Algorithm": {
+            "Purpose": "To identify and link disparate concepts across different modalities, inspired by cognitive science principles of associative thinking, thereby fostering creative connections for idea generation.",
+            "Implementation": {
+                "Cross-Modal Embeddings": {
+                    "Strategy": "Generate embeddings for all processed data elements to represent them in a way that allows for semantic similarity comparisons across modalities.",
+                    "Models": [
+                        "Text: Sentence-transformer models (e.g., `all-MiniLM-L6-v2` from Hugging Face) or API-based embeddings (e.g., OpenAI `text-embedding-ada-002`).",
+                        "Images/Figures: CLIP image encoder (OpenAI API if available for direct embedding, or open-source implementations from Hugging Face Transformers).",
+                        "Image Captions/Descriptions: Text embedding models as above.",
+                        "Audio Transcripts: Text embedding models as above."
+                    ],
+                    "Alignment": "Utilize models like CLIP that inherently provide aligned image-text embeddings. For other combinations, explore techniques like learning projection layers or relying on strong unimodal embeddings combined with conceptual linking."
+                },
+                "Concept Identification and Linking": {
+                    "Process": "1. Identify key textual concepts/entities in a 'seed' paper (the focus of ideation) and its multi-modal components. \n2. Retrieve related concepts/elements from the integrated multi-modal knowledge base using similarity search in the embedding spaces. \n3. Actively search for 'associative chains': sequences of related items where links can cross modalities (e.g., Text_Concept_A in seed paper -> similar_embedding -> Image_X in related paper -> Image_X_Caption -> Text_Concept_B in another paper).",
+                    "Cognitive Inspiration": "Model mechanisms like 'spreading activation' or 'remote association'. Prioritize links that are non-obvious (semantically distant in a single modality) but connected through a strong cross-modal bridge."
+                },
+                "Creative Ideation Priming": "The output of this module is a set of 'cross-modal insights' – structured descriptions of these associative links (e.g., 'Concept_A from the core paper appears visually analogous to Structure_S in Figure_F from Paper_P, which is discussed in the context of Problem_Q in Paper_P's text. This suggests exploring Concept_A in relation to Problem_Q.'). These insights prime the LLM idea generator."
+            }
+        },
+        "Module 3: Iterative Idea Generation and Refinement with Multi-Modal Feedback": {
+            "Purpose": "To generate initial research ideas based on textual and cross-modal associative insights, and then iteratively refine these ideas using feedback from ReviewingAgents that consider the multi-modal context.",
+            "Implementation": {
+                "Initial Idea Generation": "An LLM (e.g., GPT-4) is prompted with the core paper's information, relevant textual context from related literature (similar to ResearchAgent), AND the 'cross-modal insights' generated by Module 2. The prompt will explicitly ask the LLM to synthesize these diverse inputs to propose a problem, method, and experiment design.",
+                "Multi-Modal Reviewing & Feedback": {
+                    "ReviewingAgents": "Instantiate ReviewingAgents (can be separate LLM calls or human evaluators) with human preference-aligned LLMs (e.g., GPT-4).",
+                    "Feedback Scope": "These agents receive the generated idea, the core paper, and the specific cross-modal insights that informed the idea. They provide critiques focusing not only on novelty, clarity, and soundness (as in ResearchAgent) but also on how well the idea leverages the multi-modal connections and whether the cross-modal links are appropriately interpreted or could be extended."
+                },
+                "Idea Refinement Algorithm": "The initial LLM generator takes the original idea and the multi-modal feedback from ReviewingAgents to produce a revised idea. This loop can iterate, with the LLM attempting to address critiques, seek further clarifications (simulated), or integrate new multi-modal evidence if suggested by reviewers."
+            }
+        }
+    },
+    "Step-by-Step Experiment Plan": {
+        "Step 1: Dataset Curation and Preprocessing": {
+            "Action": "Select 50-100 'core' scientific papers from 2-3 diverse disciplines (e.g., AI/ML, Computational Biology, Materials Science) from sources like arXiv, PMC. For each core paper, identify 10-20 highly relevant cited/citing papers.",
+            "Data Extraction": "For all selected papers, execute Module 1: Extract full text, figures (as images), and figure captions. If available and feasible, find 5-10 conference talks related to the topics of core papers and transcribe them.",
+            "Storage": "Organize extracted data and metadata (source paper, figure number, caption text, image file path, transcript snippets) into a structured format (e.g., JSON files per paper linked by paper IDs)."
+        },
+        "Step 2: Implement Baseline (ResearchAgent) and CMARI Modules": {
+            "ResearchAgent Baseline": "Implement a version of the ResearchAgent focusing on its text-based idea generation and iterative refinement using an LLM like GPT-3.5-turbo or GPT-4. Use retrieved textual information from related papers.",
+            "CMARI Module Implementation": {
+                "Multi-Modal Integration (Module 1)": "Develop scripts to automate the extraction and preprocessing from Step 1.",
+                "Associative Thinking Algorithm (Module 2)": "Implement the cross-modal embedding generation using chosen models (e.g., `sentence-transformers` for text/captions, Hugging Face `CLIPModel` for images). Develop the algorithm to find associative chains based on embedding similarity and heuristics (e.g., path length, diversity of modalities in a chain).",
+                "Iterative Refinement (Module 3)": "Develop prompting strategies for idea generation using cross-modal insights and for multi-modal feedback generation by ReviewingAgents."
+            }
+        },
+        "Step 3: Idea Generation": {
+            "Process": "For each 'core' paper: \na) Generate 3-5 research ideas using the Baseline ResearchAgent. \nb) Generate 3-5 research ideas using CMARI. Ensure CMARI uses the cross-modal insights from Module 2. \nFor both, perform 1-2 rounds of iterative refinement with their respective ReviewingAgent feedback mechanisms.",
+            "LLM Choice": "Use GPT-4 API for the main generator and reviewer LLMs for high-quality output. Specify model versions for reproducibility (e.g., `gpt-4-0613`).",
+            "Example Prompt for CMARI Idea Generation (Initial)": "\"Given the core paper '[Core Paper Title]', its abstract '[Abstract]', relevant textual context from related papers: '[Text Snippets]', AND the following Cross-Modal Associative Insights: \n- Insight 1: [Detailed description of Insight 1, e.g., 'Figure A in Paper_X (showing pattern P) is semantically linked to textual concept C in Paper_Y, suggesting P might be an instance/consequence of C.'] \n- Insight 2: [Detailed description of Insight 2] \nBased on ALL this information, generate a novel research idea. Focus on creatively bridging or exploring connections highlighted by the multi-modal insights. Propose: \n1. Research Problem (clearly defined): \n2. Proposed Method (novel and plausible): \n3. Experiment Design (how to validate the method and problem):\"",
+            "Example Prompt for CMARI ReviewingAgent": "\"You are a ReviewingAgent. Evaluate the following research idea, generated from '[Core Paper Title]' and these cross-modal insights: [List insights]. \nGenerated Idea: \nProblem: [Problem] \nMethod: [Method] \nExperiment: [Experiment] \nCritique based on: \n1. Novelty (1-5): \n2. Creativity (1-5, especially in using multi-modal links): \n3. Soundness/Plausibility (1-5): \n4. Clarity (1-5): \n5. Effective use of Cross-Modal Insights (1-5): Did it leverage them well? Are there alternative interpretations/extensions of these insights? \nProvide specific, constructive feedback for improvement, highlighting multi-modal aspects.\""
+        },
+        "Step 4: Evaluation Setup": {
+            "Human Evaluators": "Recruit 3-5 domain experts (e.g., PhD students, postdocs) for each discipline covered in the dataset. Ensure they are not authors of the papers.",
+            "Evaluation Criteria (Likert Scale 1-5 for each, 5=best)": ["Novelty", "Creativity", "Diversity (assessed over set of ideas from one core paper)", "Plausibility/Soundness", "Clarity", "Cross-Modal Integration Efficacy (for CMARI ideas, evaluators see insights used)"],
+            "Procedure": "Conduct a blind review. Each idea is presented with its source core paper. Evaluators rate each idea independently. Provide clear guidelines and calibration examples for ratings.",
+            "Model-Based Evaluation (Secondary)": "Prompt a separate high-capacity LLM (e.g., Claude 3 Opus or a different GPT-4 instance) to score ideas on the same criteria (excluding diversity which is harder for single-idea eval) to check for correlation with human scores. Example prompt: 'As an expert research evaluator, rate the following idea (Problem, Method, Experiment) derived from [Core Paper Title] on Novelty, Creativity, Plausibility, Clarity (1-5 scale for each). Justify your ratings briefly.'"
+        },
+        "Step 5: Quantitative and Qualitative Analysis": {
+            "Quantitative": "Compare average scores for CMARI vs. Baseline ResearchAgent on all human evaluation criteria using appropriate statistical tests (e.g., t-tests, Wilcoxon signed-rank). Calculate inter-rater reliability (e.g., Krippendorff's alpha). Measure diversity using semantic dissimilarity of generated idea embeddings (e.g., 1 - avg cosine similarity of SBERT embeddings of idea descriptions).",
+            "Qualitative": "Collect and analyze illustrative examples where CMARI generated significantly more creative/novel ideas. Highlight how specific cross-modal insights led to these improved ideas. Analyze cases where CMARI failed or underperformed to identify limitations.",
+            "Ablation Studies (if time permits)": [
+                "CMARI (Text + Visuals only) vs. CMARI (Full - Text + Visuals + Audio Transcripts, if used).",
+                "CMARI (with Associative Algorithm) vs. CMARI-variant (LLM gets raw multi-modal data elements without explicit associative links from Module 2, to show value of the linking step)."
+            ]
+        },
+        "Step 6: Assess Computational Efficiency": {
+            "Metrics": "Record average time taken to generate and refine an idea for both CMARI and baseline. Note any significant overhead introduced by multi-modal processing and associative linking.",
+            "Analysis": "Discuss the trade-offs between improved idea quality and computational cost."
+        },
+        "Step 7: Reporting and Dissemination": {
+            "Action": "Write a research paper detailing the CMARI framework, methodology, experiments, results, and discussion. Target top-tier AI/NLP/Multi-Modal conferences (ACL, NeurIPS, ICLR, CVPR). Release code and (anonymized, if necessary) evaluation data to ensure reproducibility."
+        }
+    }
+}
+```
