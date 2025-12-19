@@ -29,10 +29,19 @@ class OpenaiLLM:
 
         # Initialize the client based on the mode (Azure OpenAI or Native OpenAI)
         if getattr(args, 'use_native_openai', False):
-            self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            api_key = os.getenv("OPENAI_API_KEY")
+            if not api_key:
+                raise ValueError("OPENAI_API_KEY environment variable is not set. Please set it in your .env file or environment.")
+            self.client = OpenAI(api_key=api_key)
             self.MODEL_NAME = self.args.NATIVE_OPENAI_MODEL_NAME
             logger.info("Initialized OpenAI LLM in Native OpenAI mode.")
         else:
+            if not args.AZURE_OPENAI_ENDPOINT:
+                raise ValueError("AZURE_OPENAI_ENDPOINT is not set in config. Please configure it in your config file.")
+            if not args.AZURE_OPENAI_KEY:
+                raise ValueError("AZURE_OPENAI_KEY is not set in config. Please configure it in your config file.")
+            if not args.AZURE_OPENAI_API_VERSION:
+                raise ValueError("AZURE_OPENAI_API_VERSION is not set in config. Please configure it in your config file.")
             self.client = AzureOpenAI(
                 azure_endpoint=args.AZURE_OPENAI_ENDPOINT,
                 api_key=args.AZURE_OPENAI_KEY,
@@ -93,14 +102,15 @@ class OpenaiLLM:
             }
             logger.info(f"OpenaiLLM Interaction | {json.dumps(interaction_details, ensure_ascii=False)}")
         except Exception as e:
-            # Log the interaction details
+            error_msg = str(e)
+            logger.error(f"OpenaiLLM | API call failed: {error_msg}")
             interaction_details = {
                 "system_msg": system_msg,
                 "prompt": prompt,
                 "llm_response": res,
                 "success": False,
                 'cost': 0,
-                "msg": e,
+                "msg": error_msg,
                 "model": "openai_"+self.MODEL_NAME
             }
             logger.info(f"OpenaiLLM Interaction | {json.dumps(interaction_details, ensure_ascii=False)}")

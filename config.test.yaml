@@ -13,16 +13,16 @@ OUTPUT_DIR: "output"
 ACADEMIC_SEARCH_ENGINE_IP_ADDRESS: "http://0.0.0.0:9918/"
 MAX_RETRY_TIMES_FOR_ACADEMIC_SEARCH_ENGINE: 6
 EMBEDDING_URL: "http://0.0.0.0:9918/compute_embedding"
-EMBEDDING_MODEL_DIR: "all-MiniLM-L6-v2"
-RERANK_MODEL_DIR: "ms-marco-MiniLM-L-6-v2"
+EMBEDDING_MODEL_DIR: "sentence-transformers/all-MiniLM-L6-v2"
+RERANK_MODEL_DIR: "cross-encoder/ms-marco-MiniLM-L-6-v2"
 FAISS_INDEX_DIR: "faiss/"
 
 LLM_COMPANY: "openai"
 # LLM_COMPANY: "deepseek"
 # LLM_COMPANY: "anthropic"
 # OPENAI LLM MODEL
-use_native_openai: false
-NATIVE_OPENAI_MODEL_NAME: "gpt-4o"
+use_native_openai: true
+NATIVE_OPENAI_MODEL_NAME: "meta-llama/llama-3.3-70b-instruct:free"
 OPENAI_API_KEY: ""
 OPENAI_BASE_URL: ""
 AZURE_OPENAI_MODEL_NAME: "gpt-4o"

@@ -50,6 +50,11 @@ class BaseAgent:
             try:
                 # Attempt to call the LLM
                 res = self.llm.run(sys, prompt)
+                
+                if res is None:
+                    logger.error(f"{self.task_name} | LLM call returned None on attempt {i}. Check OpenaiLLM logs for the actual error.")
+                    continue
+                
                 logger.info(f"{self.task_name} | LLM call successful on attempt {i}")
 
                 # Parse the response if required

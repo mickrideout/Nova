@@ -8,7 +8,7 @@ logger = logging.getLogger()
 
 class PaperSearchEngine:
 
-    def __init__(self, args=None, embedding_model_name="rag/all-MiniLM-L6-v2", rerank_model_file="rag/ms-marco-MiniLM-L-6-v2"):
+    def __init__(self, args=None, embedding_model_name="sentence-transformers/all-MiniLM-L6-v2", rerank_model_file="cross-encoder/ms-marco-MiniLM-L-6-v2"):
         # Initialize the embedding model and the reranking model
         logger.info(f"PaperRagFaiss | load embedding model from:{embedding_model_name}")
         self.embedding_model = SentenceTransformer(embedding_model_name)

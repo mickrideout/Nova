@@ -1,1 +1,7 @@
 test/
+.history/
+__pycache__/
+log/
+output/
+filter_arxiv-metadata-oai-snapshot.json
+faiss/

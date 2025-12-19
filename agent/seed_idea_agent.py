@@ -3,6 +3,7 @@ import logging
 from typing import List
 import os.path
 from agent.base_agent import BaseAgent
+from vo.base import BaseVO
 from vo.idea_data import SeedIdeaResult, IdeaResult, load_SeedIdeaResult_from_dict
 from vo.paper_data import Paper
 from utils_tool import extract_json_between_markers
@@ -112,6 +113,8 @@ class SeedIdeaAgent(BaseAgent):
                     fail_times=1,
                     parse_data_flag=False
                 )
+                if p1_result is None or (isinstance(p1_result, BaseVO) and not p1_result.success):
+                    raise Exception("LLM call returned failure")
                 seed_idea = self._parse_idea_from_internal_knowledge(response=p1_result, prompt=p1)
                 break
             except Exception as e:
@@ -147,6 +150,8 @@ class SeedIdeaAgent(BaseAgent):
                     fail_times=3,
                     parse_data_flag=False
                 )
+                if p2_result is None or (isinstance(p2_result, BaseVO) and not p2_result.success):
+                    raise Exception("LLM call returned failure")
                 popular_idea_list = self._parse_idea_from_popular_knowledge(
                     response=p2_result,
                     source="popular_knowledge"
@@ -177,6 +182,8 @@ class SeedIdeaAgent(BaseAgent):
                     fail_times=3,
                     parse_data_flag=False
                 )
+                if p3_result is None or (isinstance(p3_result, BaseVO) and not p3_result.success):
+                    raise Exception("LLM call returned failure")
                 science_discovery_idea_list = self._parse_idea_from_science_discovery_idea(p3_result)
                 return p3, p3_result, science_discovery_idea_list
             except Exception as e:

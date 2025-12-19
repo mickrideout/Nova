@@ -59,7 +59,7 @@ def filter_cv_nlp_ai_paper(kaggle_arxiv_data, filter_paper_file):
 if __name__ == "__main__":
 
     # https://www.kaggle.com/datasets/Cornell-University/arxiv
-    kaggle_arxiv_data = '/kaggle/input/arxiv/arxiv-metadata-oai-snapshot.json'  # Input file path
+    kaggle_arxiv_data = '/home/mick/data/arxiv/arxiv-metadata-oai-snapshot.json'  # Input file path
     filter_paper_file = 'filter_arxiv-metadata-oai-snapshot.json'  # Output file path
 
     paper_id_list, doc_list = filter_cv_nlp_ai_paper(kaggle_arxiv_data, filter_paper_file)  # Filter papers
